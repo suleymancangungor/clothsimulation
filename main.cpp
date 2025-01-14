@@ -116,11 +116,10 @@ void update() {
 
 }
 
- void render(sf::RenderWindow& window){ // önce sil sonra tekrardan ciz
+ void render(sf::RenderWindow& window){
 
     window.clear();
 
-    // Particleların cizimi
     for (int i = 0; i < particles.size(); i++) {
         sf::Vertex point(sf::Vector2f(particles[i]->posX, particles[i]->posY), sf::Color::Red);
         window.draw(&point, 1, sf::Points); // Draw as a point
@@ -208,8 +207,8 @@ int main(){
             }
         }
 
-        update(); // tüm parcacýklarýn yerleri güncellencek
-        render(window); // ekran güncellencek
+        update();
+        render(window);
 
         // Update the window
         window.display();
